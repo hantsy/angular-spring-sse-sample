@@ -16,7 +16,7 @@ import reactor.core.publisher.Flux
 import java.time.Instant
 
 @SpringBootApplication
-class ServerApplication {
+class SseServerApplication {
 
     @Bean
     fun runner(template: ReactiveMongoTemplate) = CommandLineRunner {
@@ -27,7 +27,7 @@ class ServerApplication {
 }
 
 fun main(args: Array<String>) {
-    runApplication<ServerApplication>(*args)
+    runApplication<SseServerApplication>(*args)
 }
 
 @RestController()
