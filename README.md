@@ -5,6 +5,12 @@ This sample is to demonstrate a chat application using the following cutting-edg
 * Spring WebFlux based Server Sent Event to broadcast messages to clients
 * Spring Data MongoDB based  `@Tailable`  query result as an infinite stream
 
+## Prerequisites
+
+* NodeJS  14
+* OpenJDK 14
+* Docker for Windows/MacOS
+
 ## Build 
 
 Before running the application, you should build and run client and server side respectively.

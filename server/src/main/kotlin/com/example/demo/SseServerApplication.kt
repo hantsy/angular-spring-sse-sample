@@ -21,6 +21,7 @@ class SseServerApplication {
     @Bean
     fun runner(template: ReactiveMongoTemplate) = CommandLineRunner {
         println("running CommandLineRunner...")
+        template.insert(Message(body="test")).then().block()
         template.executeCommand("{\"convertToCapped\": \"messages\", size: 100000}")
                 .subscribe(::println);
     }
